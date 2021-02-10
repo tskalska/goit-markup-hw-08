@@ -1,0 +1,12 @@
+
+// $animation-duration: 250ms;
+// $animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+$animation: (
+  'duration': 250ms,
+  'timing-function': cubic-bezier(0.4, 0, 0.2, 1),
+);
+
+@function makeAnimation($key) {
+  @return map-get($animation, $key);
+}

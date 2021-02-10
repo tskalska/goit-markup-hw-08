@@ -1,0 +1,145 @@
+/* portfolio */
+
+.portfolio-header {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.main-title__portfolio {
+  visibility: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.wrapper {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter {
+  display: flex;
+  justify-content:center;
+  margin-bottom: 34px;
+
+  .item {
+    margin-right: 8px;
+    align-items: center;
+  }
+}
+
+
+.filtеr-button {
+  padding: 6px 22px;
+
+  color:  getColor('title-text');
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  background-color:  getColor('secondary-bg');
+
+  transition:  makeAnimation( 'duration')  makeAnimation('timing-function');
+  transition-property: color, box-shadow, background-color;
+
+
+
+  @extend .button;
+
+  &:hover,
+  &:focus {
+    background-color:  getColor('accent');
+    color:  getColor('wite-primary');
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border: none;
+  }  
+
+}
+
+.projects {
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &>.item {
+    width: 370px;
+    border: 1px solid #EEEEEE;
+   
+    box-sizing: border-box;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &>.item:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+
+  &>.item:nth-child(3n) {
+      margin-right: 0;
+  }
+}
+
+.project__link{
+  display: inline-block;
+  font-size: 0;
+  transition: box-shadow  makeAnimation( 'duration')  makeAnimation('timing-function');
+
+  &:hover,
+  &:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+
+.project__text {
+  padding: 20px 24px;
+}
+
+.project__link--thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  color:  getColor('wite-primary');
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+
+  transition: transform  makeAnimation('duration')  makeAnimation('timing-function');
+
+.project__link:focus &,
+.project__link:hover & {
+  transform: translateY(0); }
+}
+
+.project__overlay > p {
+  margin:0;
+}
+
+.project__text > p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: getColor('text-primary');
+}
+
+.project__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  color:  getColor('title-text');
+  
+  margin-top: 0;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,69 @@
+/* Modal window styling */
+.backdrop {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity  makeAnimation('duration')  makeAnimation('timing-function');
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  .modal{
+    transform: translate(-50%,-50%) scale(0.6);
+  }
+}
+ 
+.modal {
+  box-sizing: border-box;
+  width: 450px;
+  height: 609px;
+  background-color:  getColor('wite-primary');
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+
+  color:  getColor('title-text');
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1);
+
+  transition: transform  makeAnimation( 'duration')  makeAnimation('timing-function');
+  
+  @media (min-width:1170px) {
+    width: 528px;
+    height: 581px;
+  }
+  
+}
+
+.close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  fill:  getColor('title-text');
+
+  transition: fill  makeAnimation( 'duration')  makeAnimation('timing-function');
+
+  &:hover,
+  &:focus{
+  fill:  getColor('accent');
+} 
+}
+

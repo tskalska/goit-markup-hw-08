@@ -1,0 +1,29 @@
+// $primary-text-color: #757575;
+// $title-text-color: #212121;
+// $accent-color:  #2196F3;
+// $hero-footer-bg-color:#2F303A;
+// $primaty-wite-color:  #fff;
+// $secondary-bg-color: #F5F4FA;
+// $hero-bg-color:#c4c4c4;
+// $icon-main-color:#AFB1B8;
+// $gradient-hero-color-from: rgba(47, 48, 58, 0.4);
+// $gradient-hero-color-to:rgba(47, 48, 58, 0.4);
+
+
+$colors: (
+  'text-primary': #757575,
+  'title-text':  #212121,
+  'accent': #2196F3,
+  'hero-footer-bg': #2F303A,
+  'wite-primary':#fff,
+  'secondary-bg':#F5F4FA,
+  'hero-bg':#c4c4c4,
+  'icon-main':#AFB1B8,
+  'gradient-hero-from': rgba(47, 48, 58, 0.4),
+  'gradient-hero-to':rgba(47, 48, 58, 0.4),
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
