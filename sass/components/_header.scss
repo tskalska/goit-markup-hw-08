@@ -252,16 +252,17 @@
     &>.item{
     margin-bottom: 10px;
     }
-
-    &>.item:not(:last-child){
-      margin-right: 10px;
-    }
   }
 
   @media screen and (min-width: 1200px){
     flex-direction: row;
     align-items: center;
     margin-left: 305px;
+
+    &>.item:not(:last-child){
+      margin-right: 30px;
+    }
+
   }
 }
 

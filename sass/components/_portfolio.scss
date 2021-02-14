@@ -86,20 +86,21 @@
     margin: auto;
     box-sizing: border-box;
     border: 1px solid #EEEEEE;
+    margin-bottom: 30px;
 
     @media screen and (min-width:767px) {
       max-width: 354px;
     }
-  }
-
-  &>.item {
-      margin-bottom: 30px;
   }
     
     //     margin-right: 0;
     // width: 370px;
     // margin-right: 30px;
     // margin-bottom: 30px;
+
+    @media screen and (max-width:766px) {
+      margin-bottom: 60px;
+    }
   }
 
   // &>.item:nth-last-child(-n+3) {

@@ -364,9 +364,6 @@ img {
   .contacts > .item {
     margin-bottom: 10px;
   }
-  .contacts > .item:not(:last-child) {
-    margin-right: 10px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -379,6 +376,9 @@ img {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 305px;
+  }
+  .contacts > .item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -1190,6 +1190,7 @@ address {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #EEEEEE;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 767px) {
@@ -1198,8 +1199,10 @@ address {
   }
 }
 
-.projects > .item {
-  margin-bottom: 30px;
+@media screen and (max-width: 766px) {
+  .projects {
+    margin-bottom: 60px;
+  }
 }
 
 .project__link {
