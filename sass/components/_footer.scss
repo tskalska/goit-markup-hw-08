@@ -4,6 +4,14 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color:  getColor('hero-footer-bg');
+  width: 100%;
+ 
+  @media  (min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+  }
+
   @media (min-width:(1170px)) {
     display: flex;
     align-items: baseline;
@@ -78,7 +86,7 @@ address {
 // }
 
 .subscribe__form input{
-  width: 100%;
+  width: 450px;
   height: 50px;
   margin-bottom: 20px;
   
@@ -91,6 +99,10 @@ address {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   padding-left: 16px;}
+
+  @media (max-width:450px) {
+    width: 100%;
+  }
 }
 
 // {
