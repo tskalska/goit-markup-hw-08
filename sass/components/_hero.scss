@@ -41,11 +41,11 @@ h1 {
     background-image:url(../../img/herobg768@2x.jpg);
   }
 
-  @media (min-width: 961){
+  @media screen and (min-width: 961px){
     background-image:url(../../img/herobg1600.jpg);
   }
 
-  @media (min-width:960px) and (min-resolution:2dppx){
+  @media (min-width:1200px) and (min-resolution:2dppx){
     background-image:url(../../img/herobg1600@2x.jpg);
   }
 }
@@ -61,9 +61,14 @@ h1 {
 }
 
 .hero--wrapper {
-  // width: 696px;
   text-align: center;
   margin: 0 auto;
+  width: 360px;
+
+  @media (min-width:1200px) {
+    width: 696px;
+  }
+
 } 
 
 .hero__button {
