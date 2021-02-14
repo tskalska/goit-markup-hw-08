@@ -69,6 +69,7 @@
     top:0;
     left:0;
     width: 100%;
+    height: auto;
 
     padding: 48px 40px 60px;
     
@@ -139,12 +140,7 @@
   }
 }
 
-.site-nav .item {
-  &:not(:last-child){
-    margin-bottom: 30px;
-  }
-}
-
+.site-nav .item,
 .contacts .item {
   &:not(:last-child){
     margin-bottom: 32px;
