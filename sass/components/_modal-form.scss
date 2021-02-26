@@ -120,7 +120,8 @@
 
   &::before {
     content: '';
-    width: 16px;
+    display: block;
+    min-width: 16px;
     height: 15px;
     border:2px solid  getColor('title-text');
     border-radius: 2px;
