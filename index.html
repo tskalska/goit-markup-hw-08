@@ -12,14 +12,16 @@
 
 <body>
     <header class="page-header">
-        <div class="page-header--wrapper container">
-            <a href="./index.html" class="logo"><span class="accent-color">Web</span>Studio</a>
-            <button type="button" class="nav__button" aria-expanded="false" aria-controls="nav-container" data-menu-button>
-                <svg class="nav__button--icon" width="24" height="16" aria-label="open menu">
-                    <use class="icon__cross" href ="./img/symbol-defs.svg#icon-close-button"></use>
-                    <use class="icon__menu" href ="./img/symbol-defs.svg#menu-button"></use>
-                </svg>
-            </button>
+        <div class="page-header__wrapper container">
+            <div class="logo__wrapper">
+                <a href="./index.html" class="logo"><span class="accent-color">Web</span>Studio</a>
+                <button type="button" class="nav__button" aria-expanded="false" aria-controls="nav-container" data-menu-button>
+                    <svg class="nav__button--icon" width="24" height="16" aria-label="open menu">
+                        <use class="icon__cross" href ="./img/symbol-defs.svg#icon-close-button"></use>
+                        <use class="icon__menu" href ="./img/symbol-defs.svg#menu-button"></use>
+                    </svg>
+                </button>
+            </div>
             <nav class="nav-container" id="nav-container" data-menu>
                 <ul class="site-nav" >
                     <li class="item"><a href="./index.html" class="site-nav__link item__link current-page">Студия</a></li>
@@ -55,14 +57,12 @@
     </header>
 
     <main class="main">
-        <div class="bgimg">
-            <section class="hero container">
-                    <div class="hero--wrapper">
-                        <h1>Эффективные решения для вашего бизнеса</h1>
-                        <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
-                    </div>
-            </section>
-        </div>
+        <section class="hero bgimg">
+            <div class="hero--wrapper">
+                <h1>Эффективные решения для вашего бизнеса</h1>
+                <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
+            </div>
+        </section>
         <section class="features__block">
             <div class="container">
                 <ul class="feature__list">
@@ -310,52 +310,54 @@
                 </ul>
             </div>    
         </section>
-        <section class="clients__block container">
-            <h2 class="section__title">Постоянные клиенты</h2>
-            <ul class="clients__block--list">
-                <li class="client__logo">
-                    <a href="" class="client__link">
-                        <svg width="44.27" height="49.23" >
-                            <use href="./img/symbol-defs.svg#icon-logo-1" ></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="client__logo">
-                    <a href="" class="client__link">
-                        <svg width="40" height="52" >
-                            <use href="./img/symbol-defs.svg#icon-logo-2"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="client__logo">
-                    <a href="" class="client__link">
-                        <svg width="41" height="42.6" >
-                            <use href="./img/symbol-defs.svg#icon-logo-3" ></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="client__logo">
-                    <a href="" class="client__link">
-                        <svg width="79.66" height="42.02" >
-                            <use href="./img/symbol-defs.svg#icon-logo-4" ></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="client__logo">
-                    <a href="" class="client__link">
-                        <svg width="59" height="47" >
-                            <use href="./img/symbol-defs.svg#icon-logo-5" ></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="client__logo">
-                    <a href="" class="client__link">
-                        <svg width="88.48" height="45.44" >
-                            <use href="./img/symbol-defs.svg#icon-logo-6"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+        <section class="clients__block">
+            <div class="container">
+                <h2 class="section__title">Постоянные клиенты</h2>
+                <ul class="clients__block--list">
+                    <li class="client__logo">
+                        <a href="" class="client__link">
+                            <svg width="44.27" height="49.23" >
+                                <use href="./img/symbol-defs.svg#icon-logo-1" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client__logo">
+                        <a href="" class="client__link">
+                            <svg width="40" height="52" >
+                                <use href="./img/symbol-defs.svg#icon-logo-2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client__logo">
+                        <a href="" class="client__link">
+                            <svg width="41" height="42.6" >
+                                <use href="./img/symbol-defs.svg#icon-logo-3" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client__logo">
+                        <a href="" class="client__link">
+                            <svg width="79.66" height="42.02" >
+                                <use href="./img/symbol-defs.svg#icon-logo-4" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client__logo">
+                        <a href="" class="client__link">
+                            <svg width="59" height="47" >
+                                <use href="./img/symbol-defs.svg#icon-logo-5" ></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="client__logo">
+                        <a href="" class="client__link">
+                            <svg width="88.48" height="45.44" >
+                                <use href="./img/symbol-defs.svg#icon-logo-6"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">

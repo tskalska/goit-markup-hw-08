@@ -67,13 +67,14 @@ h1 {
 
   @media (min-width:1200px) and (min-resolution:2dppx){
     height: 600px;
-    max-width: 1600px;
+    max-width: 1200px;
     background-image:
     linear-gradient( 
       to right,
        getColor('gradient-hero-from'),
        getColor('gradient-hero-from')),url(../../img/herobg1600@2x.jpg);
     background-size: cover;
+    background-position: center;
   }
 }
 // {
@@ -97,7 +98,7 @@ h1 {
   }
 
   @media (min-width:1200px) {
-    max-width: 696px;
+    width: 696px;
   }
 } 
 
