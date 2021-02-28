@@ -33,7 +33,7 @@ ul {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    min-width: 1200px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -84,10 +84,13 @@ img {
 
 /* header styling*/
 .page-header {
+  position: relative;
+}
+
+.page-header--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -95,14 +98,14 @@ img {
 }
 
 @media (min-width: 768px) {
-  .page-header {
+  .page-header--wrapper {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
 @media (min-width: 450px) and (max-width: 768px) {
-  .page-header {
+  .page-header--wrapper {
     width: 450px;
   }
 }
@@ -119,7 +122,6 @@ img {
   background-color: #fff;
   padding: 0;
   margin-left: auto;
-  margin-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -134,6 +136,14 @@ img {
 
 .nav__button .icon__cross {
   display: none;
+}
+
+.nav__button.is-open {
+  position: absolute;
+  top: 10px;
+  height: 50px;
+  right: 15px;
+  top: 10px;
 }
 
 .nav__button.is-open .icon__cross {
@@ -155,9 +165,10 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100vh;
-  padding: 50px 50px 30px;
+  padding: 48px 30px 24px;
 }
 
 @media screen and (max-width: 767px) {
@@ -193,7 +204,7 @@ img {
 @media screen and (max-width: 767px) {
   .site-nav {
     font-size: 40px;
-    margin-bottom: auto;
+    margin-bottom: 302px;
     margin-left: 0;
   }
 }
@@ -432,8 +443,9 @@ h1 {
   }
 }
 
-.hero {
+.bgimg {
   width: 100%;
+  margin: 0 auto;
   height: 400px;
   padding: 118px 60px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg@1x.jpg);
@@ -444,40 +456,44 @@ h1 {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-  .hero {
+  .bgimg {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg@2x.jpg);
   }
 }
 
-@media (min-width: 768px) and (max-width: 960px) {
-  .hero {
+@media (min-width: 768px) and (max-width: 1200px) {
+  .bgimg {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg768.jpg);
     width: 768px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 960px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 960px) and (min-resolution: 2dppx) {
-  .hero {
+@media (min-width: 768px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1200px) and (min-resolution: 2dppx) {
+  .bgimg {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg768@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg768@2x.jpg);
   }
 }
 
-@media screen and (min-width: 961px) {
-  .hero {
+@media (min-width: 1200px) {
+  .bgimg {
+    min-height: 600px;
+    width: 1600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg1600.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg1600.jpg);
+    background-size: cover;
   }
 }
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
+  .bgimg {
     height: 600px;
     max-width: 1600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg1600@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg1600@2x.jpg);
+    background-size: cover;
   }
 }
 
@@ -495,7 +511,7 @@ h1 {
 
 @media (min-width: 1200px) {
   .hero--wrapper {
-    width: 696px;
+    max-width: 696px;
   }
 }
 
@@ -1126,7 +1142,7 @@ address {
 @media screen and (min-width: 767px) {
   .wrapper {
     padding-top: 94px;
-    padding-bottom: 0px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1141,6 +1157,8 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 @media screen and (max-width: 766px) {
@@ -1156,6 +1174,7 @@ address {
 
 @media screen and (min-width: 767px) {
   .filter {
+    min-width: 450px;
     margin-bottom: 34px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1197,26 +1216,42 @@ address {
 
 .projects {
   font-size: 18px;
-  margin-bottom: -30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 30px;
 }
 
 @media screen and (min-width: 767px) {
   .projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 .projects > .item {
   max-width: 450px;
-  margin: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #EEEEEE;
-  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .projects > .item {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 767px) {

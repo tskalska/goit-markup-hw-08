@@ -15,15 +15,16 @@ h1 {
   }
 }
 
-.hero {
+.bgimg {
   width: 100%;
+  margin: 0 auto;
   height: 400px;
   padding: 118px 60px;
   background-image: linear-gradient( 
       to right,
        getColor('gradient-hero-from'),
        getColor('gradient-hero-from')),
-      url(../../img/herobg@1x.jpg);
+       url(../../img/herobg@1x.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,7 +37,7 @@ h1 {
        getColor('gradient-hero-from')),url(../../img/herobg@2x.jpg);
   }
 
-  @media (min-width:768px) and (max-width:960px){
+  @media (min-width:768px) and (max-width:1200px){
     background-image:
     linear-gradient( 
       to right,
@@ -45,7 +46,7 @@ h1 {
     width:768px;
   }
 
-  @media (min-width: 768px) and (max-width:960px) and (min-resolution:2dppx){
+  @media (min-width: 768px) and (max-width:1200px) and (min-resolution:2dppx){
     background-image:
     linear-gradient( 
       to right,
@@ -53,12 +54,15 @@ h1 {
        getColor('gradient-hero-from')),url(../../img/herobg768@2x.jpg);
   }
 
-  @media screen and (min-width: 961px){
+  @media (min-width:1200px){
+    min-height: 600px;
+    width: 1600px;
     background-image:
     linear-gradient( 
       to right,
        getColor('gradient-hero-from'),
        getColor('gradient-hero-from')),url(../../img/herobg1600.jpg);
+    background-size: cover;
   }
 
   @media (min-width:1200px) and (min-resolution:2dppx){
@@ -69,6 +73,7 @@ h1 {
       to right,
        getColor('gradient-hero-from'),
        getColor('gradient-hero-from')),url(../../img/herobg1600@2x.jpg);
+    background-size: cover;
   }
 }
 // {
@@ -92,7 +97,7 @@ h1 {
   }
 
   @media (min-width:1200px) {
-    width: 696px;
+    max-width: 696px;
   }
 } 
 
