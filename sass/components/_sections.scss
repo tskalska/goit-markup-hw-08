@@ -45,13 +45,13 @@
   margin:auto;
 
 
-  @media (max-width:767px){
+  @media (max-width:767px) and (max-width:768px){
     &:not(:last-child){
       margin-bottom: 30px;
     }
   }
 
-  @media (min-width:768px) {
+  @media (min-width:768px) and (max-width:1199px){
     flex-basis: calc((100% - #{$container_mg}) / 2);
     &:nth-child(-n+2){
       margin-bottom: 30px;

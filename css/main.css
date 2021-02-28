@@ -470,7 +470,7 @@ h1 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .bgimg {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg768.jpg);
@@ -478,7 +478,7 @@ h1 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1200px) and (min-resolution: 2dppx) {
+@media (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .bgimg {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg768@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg768@2x.jpg);
@@ -488,7 +488,8 @@ h1 {
 @media (min-width: 1200px) {
   .bgimg {
     min-height: 600px;
-    width: 1600px;
+    width: 100%;
+    max-width: 1600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg1600.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg1600.jpg);
     background-size: cover;
@@ -497,8 +498,9 @@ h1 {
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 2dppx) {
   .bgimg {
-    height: 600px;
-    max-width: 1200px;
+    min-height: 600px;
+    width: 100%;
+    max-width: 1600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../img/herobg1600@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../img/herobg1600@2x.jpg);
     background-size: cover;
@@ -508,7 +510,7 @@ h1 {
 
 .hero--wrapper {
   text-align: center;
-  margin: 0 auto;
+  margin: 118px auto;
   width: 360px;
 }
 
@@ -581,13 +583,13 @@ h1 {
   margin: auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (max-width: 768px) {
   .feature__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .feature__item {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
         flex-basis: calc((100% - 30px) / 2);
