@@ -510,7 +510,7 @@ h1 {
 
 .hero--wrapper {
   text-align: center;
-  margin: 118px auto;
+  margin: 0 auto;
   width: 360px;
 }
 
@@ -522,6 +522,7 @@ h1 {
 
 @media (min-width: 1200px) {
   .hero--wrapper {
+    margin: 118px auto;
     width: 696px;
   }
 }
